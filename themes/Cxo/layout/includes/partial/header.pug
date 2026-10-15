@@ -15,7 +15,7 @@ else if (is_archive())
   - bgURL = theme.archive_header_image || theme.site_header_image
 else 
   - bgURL = theme.site_header_image
-- let bgStyle =  `background-image: url(${bgURL});`
+- let bgStyle =  `background-image: url(${url_for(bgURL)});`
 header#cxo-intro(style= introStyle + bgStyle)
   include nav.pug
   - if (is_post()){

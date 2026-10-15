@@ -1,29 +1,35 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "sud0x67-blog",
+  "version": "1.0.0",
   "private": true,
+  "description": "Hexo blog restored from the original source with the Cxo theme",
+  "engines": {
+    "node": ">=24.15.0"
+  },
   "scripts": {
-    "build": "hexo generate",
+    "build": "hexo clean && node tooling/vendor.cjs && hexo generate && node tooling/check-links.cjs",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server --port 4175",
+    "new": "hexo new",
+    "test": "playwright test",
+    "check:authoring": "node tooling/check-authoring.cjs"
   },
   "hexo": {
-    "version": "4.2.0"
+    "version": "8.1.2"
   },
   "dependencies": {
-    "hexo": "^4.0.0",
-    "hexo-deployer-git": "^2.1.0",
-    "hexo-generator-archive": "^1.0.0",
-    "hexo-generator-category": "^1.0.0",
-    "hexo-generator-index": "^1.0.0",
-    "hexo-generator-tag": "^1.0.0",
-    "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-jade": "^0.5.0",
-    "hexo-renderer-marked": "^2.0.0",
-    "hexo-renderer-sass": "^0.4.0",
-    "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0",
-    "hexo-wordcount": "^6.0.1"
+    "hexo": "8.1.2",
+    "hexo-generator-archive": "2.0.0",
+    "hexo-generator-category": "2.0.0",
+    "hexo-generator-index": "4.0.0",
+    "hexo-generator-tag": "2.0.0",
+    "hexo-renderer-marked": "7.0.1",
+    "hexo-renderer-pug": "3.0.0",
+    "hexo-server": "3.0.0",
+    "hexo-wordcount": "6.0.1",
+    "font-awesome": "4.7.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1"
   }
 }

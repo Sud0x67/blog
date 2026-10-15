@@ -1,12 +1,14 @@
-nav#cxo-intro-nav
+nav#cxo-intro-nav(aria-label='博客导航')
   section
     .intro-nav-title
-      a(href=theme.menu.Home)= theme.main_title || config.title
+      a(href=url_for(theme.menu.Home))= theme.main_title || config.title
     .intro-nav-label-box
       each url, label in theme.menu
-        a(href=url)= label
-    i.fa.fa-bars.intro-nav-menu
+        a(href=url_for(url))= label
+    details.intro-nav-menu
+      summary(aria-label='展开导航')
+        i.fa.fa-bars(aria-hidden='true')
       .intro-nav-drop
         each url, label in theme.menu
-          a(href=url)= label
+          a(href=url_for(url))= label
     .clear

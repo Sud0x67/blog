@@ -1,0 +1,34 @@
+/* Path-independent fixes for the restored Cxo theme. */
+html { scroll-padding-top: 80px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #2ac3ff; outline-offset: 4px; }
+#cxo-intro { min-height: 320px; }
+#cxo-intro h1 { overflow-wrap: anywhere; max-width: 95%; }
+#cxo-profile .profile-toggle { position: absolute; right: .5rem; bottom: .3rem; border: 0; background: transparent; color: #333; padding: 0; cursor: pointer; width: 36px; height: 36px; font-size: 1.7rem; transform: rotate(45deg); }
+#cxo-profile.profile-close .profile-toggle { transform: rotate(225deg); }
+#cxo-profile .profile-toggle i { position: static; transform: none; pointer-events: none; }
+#cxo-profile.profile-close .profile-toggle i { transform: none; }
+#go-up { border: 0; cursor: pointer; }
+#go-up.close { display: none; }
+.article-entry pre, .article-entry .highlight { overflow-x: auto; max-width: 100%; }
+.article-entry { overflow-wrap: anywhere; }
+.intro-nav-menu summary { list-style: none; cursor: pointer; }
+.intro-nav-menu summary::-webkit-details-marker { display: none; }
+#cxo-intro-nav .intro-nav-menu[open] .intro-nav-drop { display: block; visibility: visible; opacity: 1; }
+.image-viewer { border: 0; background: #222; color: white; padding: 20px; max-width: 95vw; max-height: 95vh; }
+.image-viewer::backdrop { background: #000c; }
+.image-viewer img { display: block; max-width: 85vw; max-height: 75vh; object-fit: contain; }
+.image-viewer button { display: block; margin: 0 0 15px auto; padding: 8px 12px; cursor: pointer; }
+.image-viewer p { margin-bottom: 0; }
+@media (max-width: 768px) {
+  #cxo-intro > h1 { font-size: 2rem; }
+  #cxo-intro h1.post-title { font-size: 1.7rem; }
+  #cxo-intro-nav .intro-nav-drop { position: absolute; right: 12px; min-width: 130px; background: #333; padding: 10px; }
+  #cxo-intro-nav .intro-nav-drop a { display: block; color: white; padding: 8px 12px; }
+  #cxo-intro-nav .intro-nav-drop a.main-color { color: white; }
+  .article-entry, #recent-posts { width: 92%; padding-left: 0; padding-right: 0; }
+  .license-wrapper, #comment { width: 92%; }
+  .toc-wrapper { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

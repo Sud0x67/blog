@@ -2,4 +2,9 @@
 node_modules/
 public/
 .deploy*/
-themes/
+db.json
+source/vendor/
+playwright-report/
+test-results/
+.env
+.env.*

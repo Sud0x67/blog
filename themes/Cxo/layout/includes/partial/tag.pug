@@ -1,4 +1,4 @@
-- let post = currPost
-- post.tags.forEach(function (tag){
-  a(class=className+' fa fa-tag' href='javascript:void(0)' date-tags=tag.name)= ' '+tag.name
+- const post = currPost
+- post.tags.forEach(function(tag) {
+  a(class=className + ' fa fa-tag' href=url_for(tag.path))= ' ' + tag.name
 - })

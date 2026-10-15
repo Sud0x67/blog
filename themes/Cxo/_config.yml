@@ -14,11 +14,11 @@ signature: 一个写代码的俗人.
   #friendC: //github.com/
 # SNS
 social:
-  email: mail://jokeroller@163.com
+  email: mailto:jokeroller@163.com
   github: //github.com/sud0x67
   # weibo: //www.weibo.com
-  facebook: //www.facebook.com
-  twitter: //twitter.com
+  # facebook:
+  # twitter:
   # rss: /atom.xml
 
 # —————————— Site —————————— #
@@ -51,7 +51,7 @@ reading_info:  true
 count:
   # enable analytics
   # true or flase
-  busuanzi: true
+  busuanzi: false
   # baidu code
   baidu: 
 # Time
@@ -88,10 +88,12 @@ menu:
   About: /about/
   Blog: /archives/
   Tags: /tags/
+  Directory: https://sud0x67.github.io/
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/style.css?v=2018.7.9
 - /css/animation.css?v=2018.7.9
+- /css/blog.css?v=20261016
 # scripts loaded in the end of the body
 scripts:
-- /js/main.js?v=2018.7.9
+- /js/blog.js?v=20261016
